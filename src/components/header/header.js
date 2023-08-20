@@ -1,77 +1,48 @@
-import "./header.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-function Header() {
-  const [characterName, setCharacterName] = useState("");
-  const [attributes, setAttributes] = useState({
-    DES: '',
-    FOR: '',
-    TEC: '',
-    SOR: '',
-    ATR: '',
-    CON: '',
-    CAR: '',
-  });
-
-  const [selectedOrigin, setSelectedOrigin] = useState("");
+const Header = () => {
+  const [characterName, setCharacterName] = useState('');
+  const [characterOrigin, setCharacterOrigin] = useState('');
 
   useEffect(() => {
-    const savedData = JSON.parse(localStorage.getItem("characterData"));
-    if (savedData) {
-      setCharacterName(savedData.characterName);
-      setAttributes(savedData.attributes);
-      setSelectedOrigin(savedData.selectedOrigin);
-    }
+    const storedName = localStorage.getItem('characterName');
+
+    const storedOrigin = localStorage.getItem('characterOrigin');
+
+    if (storedName) setCharacterName(storedName);
+ 
+    if (storedOrigin) setCharacterOrigin(storedOrigin);
   }, []);
 
   useEffect(() => {
-    const characterData = {
-      characterName,
-      attributes,
-      selectedOrigin,
-    };
-    localStorage.setItem("characterData", JSON.stringify(characterData));
-  }, [characterName, attributes, selectedOrigin]);
+    localStorage.setItem('characterName', characterName);
+    
+    localStorage.setItem('characterOrigin', characterOrigin);
+  }, [characterName, characterOrigin]);
 
-  const attributeChange = (attribute, value) => {
-    setAttributes((prevAtrributes) => ({
-      ...prevAtrributes,
-      [attribute]: value,
-    }));
-  };
-
-  const originChange = (event) => {
-    setSelectedOrigin(event.target.value);
-  };
+ 
 
   return (
     <div>
-      <h1>Nome do personagem:</h1>
-      <input
-        type="text"
-        placeholder="Nome do Personagem"
-        value={characterName}
-        onChange={(event) => setCharacterName(event.target.value)}
-      />
+      <h1>Header</h1>
       <div>
-        <label>DES</label>
+        <label>Nome do Personagem</label>
         <input
-          type="number"
-          value={attributes.DES}
-          onChange={(event) =>
-            attributeChange('DES', event.target.value)
-          }
+          type="text"
+          value={characterName}
+          onChange={e => setCharacterName(e.target.value)}
         />
       </div>
+      
       <div>
+        <label>Origem do Personagem:</label>
         <div>
-          <h2>Origem:</h2>
           <label>
             <input
               type="radio"
               value="medicanico"
-              checked={selectedOrigin === "medicanico"}
-              onChange={originChange}
+              checked={characterOrigin === 'medicanico'}
+              onChange={() => setCharacterOrigin('medicanico')}
             />
             Medicanico
           </label>
@@ -79,8 +50,8 @@ function Header() {
             <input
               type="radio"
               value="trilha-rede"
-              checked={selectedOrigin === "trilha-rede"}
-              onChange={originChange}
+              checked={characterOrigin === 'trilha-rede'}
+              onChange={() => setCharacterOrigin('trilha-rede')}
             />
             Trilha-Rede
           </label>
@@ -88,6 +59,6 @@ function Header() {
       </div>
     </div>
   );
-}
+};
 
-export default Header
+export default Header;
