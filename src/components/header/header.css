@@ -1,0 +1,73 @@
+.generalSheet{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px;
+}
+
+.generalSheet h1{
+    font-size: 20px;
+    color: rgb(248, 9, 9);
+}
+
+
+.nameInput label{
+    color: rgb(216, 216, 33);
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.nameInput input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgba(248,9,9);
+    outline: none;
+    font-size: 16px;
+    color: rgb(255, 8, 255);
+}
+
+.originInput{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.originInput span{
+     color: rgb(216, 216, 33);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.originRadio{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 16px;
+    max-height: 4rem;
+}
+
+.originRadio label{
+    color: rgb(255, 8, 255);
+    margin-right: 10px;
+}
+
+
+.xpInput label{
+    color: rgb(216, 216, 33);
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.xpInput input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgba(248,9,9);
+    outline: none;
+    font-size: 16px;
+    color: rgb(255, 8, 255);
+}
+    
