@@ -1,0 +1,31 @@
+.attributes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 40rem;
+}
+
+.attributes label {
+  color: rgb(216, 216, 33);
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.attributes input {
+  width: 20px;
+  padding: 10px;
+  margin-left: 8px;
+  margin-bottom: 10px;
+  background: none;
+  outline: none;
+  color: rgb(255, 8, 255);
+  font-size: 16px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

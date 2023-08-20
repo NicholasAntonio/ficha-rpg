@@ -26,8 +26,8 @@ const ImageUploader = () => {
   };
 
   return (
-    <div>
-      <h2>Imagem do personagem</h2>
+    <div className="imageComponent">
+      <label className="picture"> 
       <input
         type="file"
         accept="image/*"
@@ -35,11 +35,15 @@ const ImageUploader = () => {
         id="upload-button"
         className="file-input"
       />
+       <p className={`choose-image ${selectedImage ? 'hidden' : ''}`}>
+          Foto do personagem
+        </p>
       {selectedImage && (
         <div className="img">
-          <img src={selectedImage} alt="Uploaded" />
+          <img src={selectedImage} alt="Uploaded" /> 
         </div>
       )}
+      </label>
       <button onClick={loadImageFromLocalStorage}>Carregar personagem</button>
     </div>
   );

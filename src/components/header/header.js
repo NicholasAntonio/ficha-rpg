@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import "./header.css"
+
 
 const Header = () => {
   const [characterName, setCharacterName] = useState('');
