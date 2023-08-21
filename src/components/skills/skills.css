@@ -1,0 +1,37 @@
+h2{
+    color: rgb(248,9,9);
+    font-size: 20px;
+    margin-left: 2rem;
+}
+
+.skill-list{
+    max-width: 18rem;
+    max-height: 32rem;
+    padding: 2rem;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.skill{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill label{
+    color: rgb(216,216,33);
+    margin-bottom: 2px;
+    margin-right: 5px;
+}
+
+.skill input{
+    width: 20px;
+    background: none;
+    outline: none;
+    color: rgb(255,6,255);
+    margin-right: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(255,6,255);
+}

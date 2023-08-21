@@ -1,46 +1,114 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import './skills.css'
 
-const periciasList = [
-  'Acrobacia',
+const skillList = [
+ ' Autoridade',
+ ' Liderança Carismática',
+ ' Noção de Combate',
+ ' Credibilidade',
+ ' Família',
+ ' Interface',
+ ' Reparos improvisados',
+ ' Tecnologia Médica',
+  'Primeiros socorros',
+ ' Medicina biológica',
+  'Recursos',
+'  Negociar',
+  'Cuidados pessoais',
+  'Resistência',
+ ' Feitos de força',
+  'Natação',
+  'Interrogatório',
+ ' Intimidação',
+  'Resistência a tortura e drogas',
+  'Manha',
+  'Percepção',
+  'Entrevista',
+ ' Liderança',
+  'Sedução',
+  'Trato social',
+  'Persuasão',
+  'Atuação',
+  'Contabilidade',
+  'Antropologia',
+  'Biologia',
+  'Botânica',
+  'Química',
+  'Composição',
+  'Diagnose',
+  'Cultura',
+  'Geologia',
+  'História',
+  'Idioma',
+ ' Pesquisa',
+  'Matemática',
+  'Física',
+  'Programação',
+  'Rastreamento',
+  'Sobrevivência',
+  'Zoologia',
+  'Arquearia',
   'Atletismo',
+  'Briga',
+  'Dança',
+  'Esquiva',
+  'Condução',
+  'Esgrima',
+  'Armas curtas',
+ ' Armas pesadas',
+  'Armas brancas',
+ ' Fuzis ',
+  'Submetralhadoras',
+  'Artes marciais',
+  'Pilotagem - veículo a escolha',
+  'Operar maquinário',
   'Furtividade',
-  'Intuição',
-  'Investigação',
+  'Tecnologia básica',
+ ' Ciberespaço',
+  'Demolição',
+  'Disfarce',
+  'Tocar instrumento',
+  'Arrombamento',
+  'Falsificação'
 ];
 
 const Skills = () => {
-  const [pericias, setPericias] = useState({});
+  const [skills, setPericias] = useState({});
   
   useEffect(() => {
     // Recuperar as perícias do localStorage ao montar o componente
-    const storedPericias = localStorage.getItem('pericias');
-    if (storedPericias) {
-      setPericias(JSON.parse(storedPericias));
+    const storedSkills = localStorage.getItem('skills');
+    if (storedSkills) {
+      setPericias(JSON.parse(storedSkills));
     }
   }, []);
 
-  const handlePericiaChange = (pericia, value) => {
+  const handleSkillChange = (skill, value) => {
     // Atualizar o estado das perícias e salvar no localStorage
-    const updatedPericias = { ...pericias, [pericia]: value };
+    const updatedPericias = { ...skills, [skill]: value };
     setPericias(updatedPericias);
-    localStorage.setItem('pericias', JSON.stringify(updatedPericias));
+    localStorage.setItem('skills', JSON.stringify(updatedPericias));
   };
 
   return (
     <div>
-      <h2>Perícias do Personagem</h2>
-      {periciasList.map((pericia, index) => (
-        <div key={index}>
+      <h2>Perícias</h2>
+    <div className='skill-list'>
+      
+      {skillList.map((skill, index) => (
+        <div className='skill' key={index}>
           <label>
-            {pericia}
+            {skill}
+            </label>
             <input
               type="number"
-              value={pericias[pericia] || 0}
-              onChange={(e) => handlePericiaChange(pericia, parseInt(e.target.value))}
+              value={skills[skill] || ''}
+              onChange={(e) => handleSkillChange(skill, parseInt(e.target.value))}
             />
-          </label>
+          
         </div>
       ))}
+    </div>
     </div>
   );
 };
