@@ -4,6 +4,7 @@ import Header from "./components/header/header.js";
 import Attributes from "./components/attributes/attributes";
 import ImageUploader from "./components/characterImg/characterImg";
 import Skills from "./components/skills/skills";
+import RPGCharacterSheet from "./components/charStatus/charStatus";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </section>
       <Attributes />
       <Skills />
+      <RPGCharacterSheet />
     </div>
   );
 }
