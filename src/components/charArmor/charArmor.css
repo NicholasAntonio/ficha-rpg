@@ -1,0 +1,59 @@
+.Armor{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+    padding: 10px;
+    border: 1px solid #fd6058;
+    width: 85%;
+    border-top-right-radius: 34px;
+    border-bottom-left-radius: 34px;
+    background-image: linear-gradient(to top, #30161c, #30161c, #30161c, #30161d, #30161d, #30161d, #30161d, #30161d, #30161d, #30161d, #30161e, #30161e);;
+    transition: all ease-in-out .3s;
+  }
+  
+  .Armor:hover{
+      border-radius: 0;
+      transform: scale(1.02);
+      border-top-left-radius: 34px;
+      border-bottom-right-radius: 34px;
+      box-shadow: 0 0 5px #fd6058;
+    }
+
+.custom-select {
+    background-color: #5ddbe3; 
+    color: #0f0e0e;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 5px;
+    border: none; 
+    border-radius: 5px; 
+    appearance: none; 
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    transition: all ease-in-out .3s;
+  }
+  
+    .body-part label{
+        text-transform: uppercase;
+        color: #5ddbe3;
+    }
+
+
+  .body-part > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .custom-select option{
+    font-weight: bold;
+    color: #0f0e0e;
+  }
+  .custom-select:hover{
+    box-shadow: 0 0 5px #5ddbe3;
+    border-radius: 0;
+  }

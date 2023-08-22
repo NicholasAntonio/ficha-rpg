@@ -17,29 +17,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(248, 9, 9, 0.685);
-  border: 1px dashed #aaaaaa36;
+  color: #fd6058a4;
+  text-transform: uppercase;
   cursor: pointer;
   transition: all .5s ease-in-out;
  margin-bottom: 1rem;
 }
 
 .picture:hover{
-  border: 1px dashed; 
-  color: rgb(248, 9, 9);
-  
+  color: #fd6058;
 }
 
   img{
     max-width: 100%;
     height: fit-content;
+    animation: entry .4s ease-in-out;
   }
+  
 
   button{
     background: none;
-    border: 1px solid rgb(216, 216, 33);
+    border: 1px solid #5ddbe3;
     border-radius: 3px;
-    color: rgb(216, 216, 33);
+    color: #5ddbe3;
     padding: 5px 8px;
     outline: none;
     white-space: nowrap;
@@ -52,8 +52,21 @@
    button:hover{
     text-shadow: 0 0 0.125em rgb(216, 216, 33);
     box-shadow: 0 0 0.125em rgb(216, 216, 33);
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
    }
 
   .hidden {
     display: none;
+  }
+
+  @keyframes entry{
+    from{
+      opacity: 0;
+      transform: scale(0);
+    }
+    to{
+      opacity: 1;
+      transform: scale(1);
+    }
   }

@@ -7,22 +7,35 @@
 }
 
 .attributes label {
-  color: rgb(216, 216, 33);
+  color: #5ddbe3;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 300;
   margin-right: 8px;
 }
 
 .attributes input {
   width: 20px;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-left: 8px;
   margin-bottom: 10px;
   background: none;
   outline: none;
-  color: rgb(255, 8, 255);
+  color: #5ddbe3;
   font-size: 16px;
+  border: 1px solid #5ddbe3;
+  transition: all ease-in-out .3s;
+}
+
+.attributes input:focus{
+  border: 1px solid #2adbe7;
+  box-shadow: 0 0 5px #2adbe7;
+  border-radius: 0px;
+  transition: all ease-in-out .3s;
+}
+
+.attributes button{
+  margin-left: 10px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

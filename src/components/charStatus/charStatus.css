@@ -3,12 +3,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(248,9,9);
-    border-radius: 10px;
+    border: 1px solid #fd6058;
+    border-top-right-radius: 34px;
+    border-bottom-left-radius: 34px;
     padding: 16px;
     gap: 2rem;
     max-width: 40rem;
+    background-image: linear-gradient(to top, #30161c, #30161c, #30161c, #30161d, #30161d, #30161d, #30161d, #30161d, #30161d, #30161d, #30161e, #30161e);
+    transition: all ease-in-out .3s;
 }
+
+.char-status:hover{
+    border-radius: 0;
+    transform: scale(1.02);
+    border-top-left-radius: 34px;
+    border-bottom-right-radius: 34px;
+    box-shadow: 0 0 5px #fd6058;
+  }
 
 .mtc-hp{
     display: flex;
@@ -21,11 +32,18 @@
     width: 30px;
     padding: 8px;
     margin-left: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
+    border: 1px solid #5ddbe3;
     font-size: 16px;
     outline: none;
     background: none;
-    color: rgb(255,8,255);
+    color: #5ddbe3;
+}
+
+.mtc-hp input:focus{
+    border-radius: 0;
+    box-shadow: 0 0 5px #5ddbe3;
+    transition: all ease-in-out .3s;
 }
 
 .status{
@@ -36,7 +54,7 @@
 .status label,
 .psyco label{
     margin-left: 2px;
-    color: rgb(216,216,33);
+    color: #5ddbe3;
     font-weight: bold;
     font-size: 16px;
 }

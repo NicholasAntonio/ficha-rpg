@@ -7,7 +7,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #535151;
+  background-image: linear-gradient(to top, #100f13, #151017, #1a1119, #1f121a, #25121a, #281219, #2b1118, #2e1117, #301116, #311015, #331014, #341013);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 code {

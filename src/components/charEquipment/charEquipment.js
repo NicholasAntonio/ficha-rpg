@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
+import "./charEquipment.css"
 
-const TextareaWithLocalStorage = ({ title }) => {
+const TextareaWithLocalStorage = ({ title, icon }) => {
   const [content, setContent] = useState('');
 
-  // Função para atualizar o estado do conteúdo quando o textarea muda
+  
   const handleTextareaChange = (event) => {
     setContent(event.target.value);
   };
 
-  // Efeito para carregar o conteúdo do localStorage ao montar o componente
+  
   useEffect(() => {
     const savedContent = localStorage.getItem(title);
     if (savedContent) {
@@ -16,18 +17,19 @@ const TextareaWithLocalStorage = ({ title }) => {
     }
   }, [title]);
 
-  // Efeito para salvar o conteúdo no localStorage sempre que o conteúdo mudar
+
   useEffect(() => {
     localStorage.setItem(title, content);
   }, [title, content]);
 
   return (
-    <div>
-      <h2>{title}</h2>
+    <div className='text-area'>
+     
+      <h2>{title}{icon && icon }</h2>
       <textarea
         value={content}
         onChange={handleTextareaChange}
-        rows={30}
+        rows={60}
         cols={80}
       />
     </div>

@@ -65,7 +65,7 @@ const RPGCharacterSheet = () => {
     <div className="char-status">
       <div className="mtc-hp">
         <div className="status">
-          <MonitorHeartIcon style={{ color: "green", fontSize: "32px" }} />
+          <MonitorHeartIcon style={{ color: "#5ddbe3", fontSize: "32px" }} />
           <label>
             HP
             <input
@@ -77,7 +77,7 @@ const RPGCharacterSheet = () => {
         </div>
         <div className="status">
           <ElectricBoltIcon
-            style={{ color: "rgb(9, 53, 248)", fontSize: "32px" }}
+            style={{ color: "#5ddbe3", fontSize: "32px" }}
           />
           <label>
             MTC
@@ -99,7 +99,7 @@ const RPGCharacterSheet = () => {
           onChange={handleSliderChange}
           defaultValue={100}
           size="small"
-          color="secondary"
+          color="primary"
         />
         <div
           style={{

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import "./header.css"
+import "./header.css";
+import { BiBody } from 'react-icons/bi'
 
 
 const Header = () => {
@@ -31,9 +32,9 @@ const Header = () => {
 
   return (
     <div className='generalSheet'>
-      <h1>Características gerais</h1>
+      <h1>Características gerais <BiBody size={'30px'} /></h1>
       <div className='nameInput'>
-        <label>Nome do Personagem: </label>
+        <label>Nome: </label>
         <input
           type="text"
           value={characterName}
@@ -42,7 +43,7 @@ const Header = () => {
       </div>
       
       <div className='originInput'>
-        <span>Origem do Personagem:</span>
+        <span>Origem:</span>
         <div className='originRadio'>
           <label>
             <input
