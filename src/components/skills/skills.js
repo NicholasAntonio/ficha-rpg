@@ -73,20 +73,20 @@ const skillList = [
 ];
 
 const Skills = () => {
-  const [skills, setPericias] = useState({});
+  const [skills, setSkills] = useState({});
   
   useEffect(() => {
     // Recuperar as perícias do localStorage ao montar o componente
     const storedSkills = localStorage.getItem('skills');
     if (storedSkills) {
-      setPericias(JSON.parse(storedSkills));
+      setSkills(JSON.parse(storedSkills));
     }
   }, []);
 
   const handleSkillChange = (skill, value) => {
     // Atualizar o estado das perícias e salvar no localStorage
     const updatedPericias = { ...skills, [skill]: value };
-    setPericias(updatedPericias);
+    setSkills(updatedPericias);
     localStorage.setItem('skills', JSON.stringify(updatedPericias));
   };
 

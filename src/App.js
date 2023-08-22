@@ -5,6 +5,8 @@ import Attributes from "./components/attributes/attributes";
 import ImageUploader from "./components/characterImg/characterImg";
 import Skills from "./components/skills/skills";
 import RPGCharacterSheet from "./components/charStatus/charStatus";
+import CharArmor from "./components/charArmor/charArmor";
+import CharEquipment from "./components/charEquipment/charEquipment";
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
       <Attributes />
       <Skills />
       <RPGCharacterSheet />
+      <CharArmor />
+      <CharEquipment title='Equipamentos'/>
+      <CharEquipment title='Implantes e hacks'/>
+      <CharEquipment title='Itens pessoais'/>
     </div>
   );
 }
