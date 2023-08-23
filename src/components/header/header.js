@@ -88,7 +88,7 @@ const Header = () => {
               checked={characterOrigin === 'combatente'}
               onChange={() => setCharacterOrigin('combatente')}
             />
-            Combatente
+            Autoridade
           </label>
           <label>
             <input
