@@ -72,7 +72,6 @@ const skillList = [
 "Resistência a tortura e drogas",
 "Sedução",
 "Sobrevivência",
-"Submetralhadoras",
 "Tecnologia básica",
 "Tecnologia Médica",
 "Tocar instrumento",
