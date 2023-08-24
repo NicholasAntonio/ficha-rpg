@@ -83,3 +83,8 @@ main{
   border-bottom-left-radius: 34px;
   box-shadow: 0 0 5px #fd6058;
 }
+
+.button-container{
+  padding-top: 6rem;
+  padding-left: 2rem;
+}
