@@ -52,6 +52,7 @@ const skillList = [
 "Matemática",
 "Medicina biológica",
 "Medicamentos",
+"Mercado financeiro",
 "Natação",
 "Negociar",
 "Noção de Combate",

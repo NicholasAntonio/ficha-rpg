@@ -29,7 +29,7 @@
 }
 
 .mtc-hp input{
-    width: 30px;
+    width: 70px;
     padding: 8px;
     margin-left: 10px;
     border-radius: 8px;
@@ -40,11 +40,14 @@
     color: #5ddbe3;
 }
 
+
+
 .mtc-hp input:focus{
     border-radius: 0;
     box-shadow: 0 0 5px #5ddbe3;
     transition: all ease-in-out .3s;
 }
+
 
 .status{
     display: flex;

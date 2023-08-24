@@ -3,16 +3,19 @@ import "./charStatus.css";
 import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import PsychologyIcon from "@mui/icons-material/Psychology";
+import EuroIcon from '@mui/icons-material/Euro';
 import { Slider } from "@mui/material";
 
 const RPGCharacterSheet = () => {
   const [sliderValue, setSliderValue] = useState(0);
   const [hpValue, sethpValue] = useState("");
   const [mtcValue, setmtcValue] = useState("");
+  const [moneyValue, setMoneyValue] = useState("");
 
   useEffect(() => {
     const storedhpValue = localStorage.getItem("hpValue");
     const storedmtcValue = localStorage.getItem("mtcValue");
+    const storedMoneyValue = localStorage.getItem("moneyValue")
     const savedValue = localStorage.getItem("sliderValue");
     if (savedValue !== null) {
       setSliderValue(Number(savedValue));
@@ -24,12 +27,16 @@ const RPGCharacterSheet = () => {
     if (storedmtcValue) {
       setmtcValue(storedmtcValue);
     }
+    if (storedMoneyValue) {
+      setMoneyValue(storedMoneyValue);
+    }
   }, []);
 
   useEffect(() => {
     localStorage.setItem("hpValue", hpValue);
     localStorage.setItem("mtcValue", mtcValue);
-  }, [hpValue, mtcValue]);
+    localStorage.setItem("moneyValue", moneyValue);
+  }, [hpValue, mtcValue, moneyValue])
 
   const handleHpChange = (event) => {
     sethpValue(event.target.value);
@@ -37,6 +44,10 @@ const RPGCharacterSheet = () => {
 
   const handleMtcChange = (event) => {
     setmtcValue(event.target.value);
+  };
+
+  const handleMoneyChange = (event) => {
+    setMoneyValue(event.target.value);
   };
 
   const handleSliderChange = (event) => {
@@ -85,6 +96,18 @@ const RPGCharacterSheet = () => {
               type="number"
               value={mtcValue}
               onChange={handleMtcChange}
+            />
+          </label>
+        </div>
+        <div className="status">
+          <EuroIcon
+            style={{ color: "#5ddbe3", fontSize: "32px" }}
+          />
+          <label>
+            <input
+              type="number"
+              value={moneyValue}
+              onChange={handleMoneyChange}
             />
           </label>
         </div>
