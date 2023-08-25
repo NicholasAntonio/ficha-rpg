@@ -12,6 +12,7 @@ import { GiTec9 } from "react-icons/gi";
 import { BsPhone } from "react-icons/bs";
 import {HiDocumentDownload} from "react-icons/hi";
 import {RiMoneyEuroBoxLine} from 'react-icons/ri';
+import {FaDiceD20} from 'react-icons/fa';
 import { Button } from "@mui/material";
 
 function App() {
@@ -41,6 +42,11 @@ function App() {
             <a href="https://loja-rpg-seven.vercel.app" target="_blank">
           <Button variant="outlined" color="error" endIcon={<RiMoneyEuroBoxLine />}>
             Acesse à loja
+          </Button>
+          </a>
+            <a href="https://dice-roller-2.vercel.app" target="_blank">
+          <Button variant="outlined" color="error" endIcon={<FaDiceD20 />}>
+            Dice roller
           </Button>
           </a>
           </div>
