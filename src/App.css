@@ -85,6 +85,8 @@ main{
 }
 
 .button-container{
+  display: flex;
+  gap: 2rem;
   padding-top: 6rem;
   padding-left: 2rem;
 }

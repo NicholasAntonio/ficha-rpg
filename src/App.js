@@ -11,6 +11,7 @@ import { MdOutlineSdStorage } from "react-icons/md";
 import { GiTec9 } from "react-icons/gi";
 import { BsPhone } from "react-icons/bs";
 import {HiDocumentDownload} from "react-icons/hi";
+import {RiMoneyEuroBoxLine} from 'react-icons/ri';
 import { Button } from "@mui/material";
 
 function App() {
@@ -35,6 +36,11 @@ function App() {
             <a href="/images/regras.odt" download>
           <Button variant="outlined" color="error" endIcon={<HiDocumentDownload />}>
             Resumo das regras
+          </Button>
+          </a>
+            <a href="https://loja-rpg-seven.vercel.app" target="_blank">
+          <Button variant="outlined" color="error" endIcon={<RiMoneyEuroBoxLine />}>
+            Acesse à loja
           </Button>
           </a>
           </div>
