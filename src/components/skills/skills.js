@@ -97,6 +97,17 @@ const Skills = () => {
     setSkills(updatedPericias);
     localStorage.setItem("skills", JSON.stringify(updatedPericias));
   };
+  
+
+  const calculateReactiveValue = (value) => {
+    if (value !== "") {
+      const parsedValue = parseInt(value);
+      if (!isNaN(parsedValue)) {
+        return `+${Math.floor(parsedValue / 2)}`;
+      }
+    }
+    return '+0';
+  };
 
   return (
     <div>
@@ -105,6 +116,7 @@ const Skills = () => {
         {skillList.map((skill, index) => (
           <div className="skill" key={index}>
             <label>{skill}</label>
+            <div>
             <input
               type="number"
               value={skills[skill] || ""}
@@ -112,6 +124,10 @@ const Skills = () => {
                 handleSkillChange(skill, parseInt(e.target.value))
               }
             />
+             <div className="reactive-value">
+             {calculateReactiveValue(skills[skill] || 0)} 
+            </div>
+            </div>
           </div>
         ))}
       </div>

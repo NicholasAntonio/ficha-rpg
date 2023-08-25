@@ -12,7 +12,7 @@ h2{
 
 .skill-list{
     max-width: 18rem;
-    max-height: 60rem;
+    max-height: 90rem;
     padding: 2rem;
     font-size: 14px;
     display: flex;
@@ -26,6 +26,8 @@ h2{
     justify-content: space-between;
     align-items: center;
     transition: all ease-in-out .3s;
+    padding-right: 2.5rem;
+    width: 12rem;
 }
 
 .skill:hover {
@@ -49,7 +51,11 @@ h2{
     outline: none;
     color: #5ddbe3;
     margin-right: 10px;
-    border: none;
-    border-bottom: 1px solid #5ddbe3;
+    border: 1px solid #5ddbe3;
+}
+
+.skill .reactive-value{
+    width: 20px;
+    color: #5ddbe3;
 }
 
