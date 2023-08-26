@@ -12,6 +12,7 @@ import { GiTec9 } from "react-icons/gi";
 import { BsPhone } from "react-icons/bs";
 import {HiDocumentDownload} from "react-icons/hi";
 import {RiMoneyEuroBoxLine} from 'react-icons/ri';
+import { FaCodeBranch} from 'react-icons/fa';
 import {FaDiceD20} from 'react-icons/fa';
 import { Button } from "@mui/material";
 
@@ -56,7 +57,11 @@ function App() {
           <CharArmor />
           <CharEquipment title="Equipamentos" icon={<GiTec9 />} />
           <CharEquipment
-            title="Implantes e hacks"
+            title="Implantes"
+            icon={<FaCodeBranch />}
+          />
+          <CharEquipment
+            title="Hacks"
             icon={<MdOutlineSdStorage />}
           />
           <CharEquipment title="Itens pessoais" icon={<BsPhone />} />
