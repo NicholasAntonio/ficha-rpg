@@ -110,7 +110,7 @@ const Skills = () => {
   };
 
   return (
-    <div>
+    <div className="pattern">
       <h2>Perícias <GiSkills size={'30px'} /> </h2>
       <div className="skill-list">
         {skillList.map((skill, index) => (
